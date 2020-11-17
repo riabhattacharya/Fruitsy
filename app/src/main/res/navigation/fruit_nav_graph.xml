@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fruit_nav_graph"
+    app:startDestination="@id/fruitListFragment">
+
+    <fragment
+        android:id="@+id/fruitListFragment"
+        android:name="com.newapp.fruitsy.view.fragments.FruitListFragment"
+        android:label="Fruitsy List"
+        tools:layout="@layout/fragment_fruit_list">
+
+        <action
+            android:id="@+id/action_fruit_list_to_detail"
+            app:destination="@id/fruitDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim">
+            <argument
+                android:name="fruitDetail"
+                app:argType="com.newapp.fruitsy.model.Fruit" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fruitDetailFragment"
+        android:name="com.newapp.fruitsy.view.fragments.FruitDetailsFragment"
+        android:label="Fruitsy Detail"
+        tools:layout="@layout/fragment_fruit_detail">
+        <argument
+            android:name="fruitDetail"
+            app:argType="com.newapp.fruitsy.model.Fruit" />
+    </fragment>
+</navigation>
