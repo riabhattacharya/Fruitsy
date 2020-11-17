@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Fruitsy</string>
+    <string name="fruit_details">Fruit Details</string>
+    <string name="fruit_image">Fruit Image</string>
+    <string name="fruit_price">Price: £%.2f</string>
+    <string name="fruit_weight">Weight: %.3f KG</string>
+    <string name="menu_refresh">Refresh</string>
+</resources>
